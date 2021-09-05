@@ -80,7 +80,9 @@ function productPreview (i) {
   var imagesData = productData.photos;
   var images = document.createElement('img');
   images.classList.add('images');
-  images.classList.add('active');
+  if(i===0) {
+    images.classList.add('active');
+  }
   images.src = imagesData[i];
   productPreviewImage.appendChild(images);
 }
